@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class HW_operators {
 
-    //Задача 3
+    //Задача 3-1
     // Написать программу, которая приветствует пользователя
     //в зависимости от его пола и возраста (имя, пол и возраст задаются при старте программы)
 
@@ -34,6 +34,7 @@ public class HW_operators {
 //                System.out.println("ERROR");
 //            }
 
+        //Задача 3-2
 //        Написать 5 способов создания/получения строки
 // 1. //строка
 //          String str = "Hello ";
@@ -63,5 +64,49 @@ public class HW_operators {
 //        String str = new String(chars);
 //        System.out.println(str);
 
+        //Задача 3-3
+//        Написать программу, в которой в консоль
+//        будет выводится название месяца и сезон, к которму этот месяц
+//        относится (написать с помощью if и с помощью switch)
+
+          System.out.println("Enter you month: ");
+          Scanner scanner = new Scanner(System.in);
+          String month = scanner.nextLine();
+          //System.out.println("Your month: " + month);
+
+          if ("january".equals(month.toLowerCase())){
+              System.out.println(month + "  is Winter!");
+          } else if ("february".equals(month.toLowerCase())) {
+              System.out.println(month + "  is Winter!");
+          } else if ("march".equals(month.toLowerCase())) {
+              System.out.println(month + "  is Spring!");
+          } else if ("april".equals(month.toLowerCase())) {
+              System.out.println(month + "  is Spring!");
+          } else if ("may".equals(month.toLowerCase())) {
+              System.out.println(month + "  is Spring!");
+          } else if ("june".equals(month.toLowerCase())) {
+              System.out.println(month + "  is Summer!");
+          } else if ("jule".equals(month.toLowerCase())) {
+              System.out.println(month + "  is Summer!");
+          } else if ("august".equals(month.toLowerCase())) {
+              System.out.println(month + "  is Summer!");
+          } else if ("september".equals(month.toLowerCase())) {
+              System.out.println(month + "  is Autumn!");
+          } else if ("october".equals(month.toLowerCase())) {
+              System.out.println(month + "  is Autumn!");
+          } else if ("november".equals(month.toLowerCase())) {
+              System.out.println(month + "  is Autumn!");
+          } else if ("december".equals(month.toLowerCase())) {
+              System.out.println(month + "  is Winter!");
+          } else {
+              System.out.println(month + " I do not know such a month!");
+          }
+
+
+//        Над решением switch я подумаю завтра ))
+
      }
 }
+
+
+
