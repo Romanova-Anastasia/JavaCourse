@@ -46,11 +46,13 @@ public class HW_2 {
         Дано любое натуральное 4-х значное число. Верно ли, что все цифры числа
         различны?
 */
-      int number = 4836;
-      boolean comparisonOne = number%10 != number/10%10;
-      boolean comparisonTwo = number/100%10 != number/1000%10;
-      boolean comparisonAll = comparisonOne == comparisonTwo;
-      System.out.println(comparisonAll);
+        System.out.println("Enter you number ");
+        Scanner scanner = new Scanner(System.in);
+        int number = scanner.nextInt();
+      boolean comparison =  number%10 != number/10%10
+                            && number/10%10 != number/100%10
+                            && number/100%10 != number/1000%10;
+      System.out.println(comparison);
     }
 }
 
