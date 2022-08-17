@@ -69,44 +69,73 @@ public class HW_operators {
 //        будет выводится название месяца и сезон, к которму этот месяц
 //        относится (написать с помощью if и с помощью switch)
 
-          System.out.println("Enter you month: ");
-          Scanner scanner = new Scanner(System.in);
-          String month = scanner.nextLine();
-          //System.out.println("Your month: " + month);
+        System.out.println("Enter you month: ");
+        Scanner scanner = new Scanner(System.in);
+        String month = scanner.nextLine();
+        //System.out.println("Your month: " + month);
 
-          if ("january".equals(month.toLowerCase())){
-              System.out.println(month + "  is Winter!");
-          } else if ("february".equals(month.toLowerCase())) {
-              System.out.println(month + "  is Winter!");
-          } else if ("march".equals(month.toLowerCase())) {
-              System.out.println(month + "  is Spring!");
-          } else if ("april".equals(month.toLowerCase())) {
-              System.out.println(month + "  is Spring!");
-          } else if ("may".equals(month.toLowerCase())) {
-              System.out.println(month + "  is Spring!");
-          } else if ("june".equals(month.toLowerCase())) {
-              System.out.println(month + "  is Summer!");
-          } else if ("jule".equals(month.toLowerCase())) {
-              System.out.println(month + "  is Summer!");
-          } else if ("august".equals(month.toLowerCase())) {
-              System.out.println(month + "  is Summer!");
-          } else if ("september".equals(month.toLowerCase())) {
-              System.out.println(month + "  is Autumn!");
-          } else if ("october".equals(month.toLowerCase())) {
-              System.out.println(month + "  is Autumn!");
-          } else if ("november".equals(month.toLowerCase())) {
-              System.out.println(month + "  is Autumn!");
-          } else if ("december".equals(month.toLowerCase())) {
-              System.out.println(month + "  is Winter!");
-          } else {
-              System.out.println(month + " I do not know such a month!");
-          }
+//          if ("january".equals(month.toLowerCase())){
+//              System.out.println(month + "  is Winter!");
+//          } else if ("february".equals(month.toLowerCase())) {
+//              System.out.println(month + "  is Winter!");
+//          } else if ("march".equals(month.toLowerCase())) {
+//              System.out.println(month + "  is Spring!");
+//          } else if ("april".equals(month.toLowerCase())) {
+//              System.out.println(month + "  is Spring!");
+//          } else if ("may".equals(month.toLowerCase())) {
+//              System.out.println(month + "  is Spring!");
+//          } else if ("june".equals(month.toLowerCase())) {
+//              System.out.println(month + "  is Summer!");
+//          } else if ("jule".equals(month.toLowerCase())) {
+//              System.out.println(month + "  is Summer!");
+//          } else if ("august".equals(month.toLowerCase())) {
+//              System.out.println(month + "  is Summer!");
+//          } else if ("september".equals(month.toLowerCase())) {
+//              System.out.println(month + "  is Autumn!");
+//          } else if ("october".equals(month.toLowerCase())) {
+//              System.out.println(month + "  is Autumn!");
+//          } else if ("november".equals(month.toLowerCase())) {
+//              System.out.println(month + "  is Autumn!");
+//          } else if ("december".equals(month.toLowerCase())) {
+//              System.out.println(month + "  is Winter!");
+//          } else {
+//              System.out.println(month + " I do not know such a month!");
+//          }
 
+        //SWITCH
 
-//        Над решением switch я подумаю завтра ))
-
-     }
-}
+        switch (month.toLowerCase()) {
+            case "january":
+            case "february":
+            case "december": {
+                System.out.println(month + " is Winter!");
+                break;
+            }
+            case "march":
+            case "april":
+            case "may": {
+                System.out.println(month + " is Spring!");
+            }
+            break;
+            case "june":
+            case "jule":
+            case "august": {
+                System.out.println(month + " is Summer!");
+            }
+            break;
+            case "september":
+            case "october":
+            case "december" :
+                    {
+                System.out.println(month + " is Winter!");
+            }
+            break;
+            default: {
+                System.out.println("\"" + month + " I don't know such a month!");
+            }
+            }
+        }
+    }
 
 
 
