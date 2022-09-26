@@ -3,7 +3,7 @@ package interface_abstract;
 public abstract class Appliances implements Enabler {
     protected abstract void chooseInput();
 
-    void Menu() {
+    void menu() {
         System.out.println("menu");
     }
 

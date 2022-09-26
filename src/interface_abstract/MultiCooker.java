@@ -2,13 +2,16 @@ package interface_abstract;
 
 public class MultiCooker extends  Appliances implements Bluetooth{
 
-    private String name = "REDMOND";
+    private String name;
 
 
     public MultiCooker() {
 
     }
 
+    public MultiCooker(String name) {
+        this.name = name;
+    }
 
     @Override
     protected void chooseInput() {
@@ -17,12 +20,12 @@ public class MultiCooker extends  Appliances implements Bluetooth{
 
     @Override
     public void plugIn() {
-
+        System.out.println("plugIn");
     }
 
     @Override
     public void plugOff() {
-
+        System.out.println("plugOff");
     }
 
     @Override
