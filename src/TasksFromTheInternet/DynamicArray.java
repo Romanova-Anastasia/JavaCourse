@@ -8,10 +8,9 @@ package TasksFromTheInternet;
 //  Получить массив содержащий ящики из коллекции тремя способами и вывести на консоль.
 //  Удалить все ящики.
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
-import java.util.TreeSet;
+import java.lang.reflect.Type;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class DynamicArray{
 
@@ -27,16 +26,17 @@ public class DynamicArray{
 
 
 //Изменить вес первого ящика на 1.
-        changeBoxWeight(list.get(0));
-        list.forEach(System.out::println);
-        System.out.println("\n");
+//        changeBoxWeight(list.get(0));
+//        list.forEach(System.out::println);
+//        System.out.println("\n");
+
 // Удалить последний ящик.
 //        list.remove(list.size() - 1);
 //        list.forEach(System.out::println);
+//        System.out.println("\n");
 
 // Получить массив содержащий ящики из коллекции тремя способами и вывести на консоль.
         //NEED HELP
-
 
 //  Удалить все ящики.
 //        list.clear();
@@ -45,16 +45,27 @@ public class DynamicArray{
 
 
 // создаем новый `TreeSet` из `HeavyBox`
-        TreeSet<HeavyBox> treeSet = new TreeSet<>();
-        System.out.println(treeSet);
+        TreeSet<HeavyBox> treeSet = new TreeSet<>(HeavyBox::compareTo);
+        HeavyBox firstHouse = new HeavyBox(3, 7, 1, 3);
+        HeavyBox secondHouse = new HeavyBox(2, 5, 2, 2);
+        HeavyBox thirdHouse = new HeavyBox(7, 4, 2, 5);
 
+        treeSet.add(firstHouse);
+        treeSet.add(secondHouse);
+        treeSet.add(thirdHouse);
+
+        for (HeavyBox h: treeSet) {
+            System.out.println(h);
+        }
+//        System.out.println(treeSet);
     }
 
-    private static void convertToArray(List<HeavyBox> list) {
 
 
-    }
-    private static void  changeBoxWeight (HeavyBox box){
-        box.setWeight(box.getWeight() + 1);
-    }
+    // Общий метод для создания нового `TreeSet` из `HashSet`
+
+
+//    private static void  changeBoxWeight (HeavyBox box){
+//        box.setWeight(box.getWeight() + 1);
+//    }
 }

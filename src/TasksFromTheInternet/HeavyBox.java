@@ -1,6 +1,6 @@
 package TasksFromTheInternet;
 
-public class HeavyBox extends  Box implements  Comparable{
+public class HeavyBox extends  Box implements  Comparable <HeavyBox>{
 
         private int weight;
 
@@ -25,8 +25,10 @@ public class HeavyBox extends  Box implements  Comparable{
         }
 
     @Override
-    public int compareTo(Object o) {
-        return 0;
+    public int compareTo(HeavyBox anotherWeight) {
+        return Integer.compare(this.weight, anotherWeight.weight);
     }
+
+
 }
 
