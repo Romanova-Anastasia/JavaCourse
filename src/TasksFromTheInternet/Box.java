@@ -1,57 +1,51 @@
 package TasksFromTheInternet;
 
 public class Box {
-    private String artem;
-    private String yume;
-    private String midzu;
-    private String friends;
+    private double width;
+    private double height;
+    private double depth;
 
-    public Box(String artem, String yume, String midzu, String friends) {
-        this.artem = artem;
-        this.yume = yume;
-        this.midzu = midzu;
-        this.friends = friends;
+    public Box(double width, double height, double depth) {
+        this.width = width;
+        this.height = height;
+        this.depth = depth;
     }
 
-    public String getArtem() {
-        return artem;
+    public double getWidth() {
+        return width;
     }
 
-    public void setArtem(String artem) {
-        this.artem = artem;
+    public void setWidth(double width) {
+        this.width = width;
     }
 
-    public String getYume() {
-        return yume;
+    public double getHeight() {
+        return height;
     }
 
-    public void setYume(String yume) {
-        this.yume = yume;
+    public void setHeight(double height) {
+        this.height = height;
     }
 
-    public String getMidzu() {
-        return midzu;
+    public double getDepth() {
+        return depth;
     }
 
-    public void setMidzu(String midzu) {
-        this.midzu = midzu;
+    public void setDepth(double depth) {
+        this.depth = depth;
     }
 
-    public String getFriends() {
-        return friends;
-    }
-
-    public void setFriends(String friends) {
-        this.friends = friends;
+    double getVolume() {
+        return width * height * depth;
     }
 
     @Override
     public String toString() {
         return "Box{" +
-                "artem='" + artem + '\'' +
-                ", yume='" + yume + '\'' +
-                ", midzu='" + midzu + '\'' +
-                ", friends='" + friends + '\'' +
+                "width=" + width +
+                ", height=" + height +
+                ", depth=" + depth +
                 '}';
     }
+
 }
