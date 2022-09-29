@@ -12,8 +12,9 @@ import java.lang.reflect.Type;
 import java.sql.SQLOutput;
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.Scanner;
 
-public class DynamicArray{
+public class DynamicArray {
 
     public static void main(String[] args) {
         List<HeavyBox> list = new ArrayList<>();
@@ -57,14 +58,34 @@ public class DynamicArray{
 
         treeSet.forEach(System.out::println);
 
+
+//Набор чисел
+//      Пользователь вводит набор чисел в виде одной строки "1, 2, 3, 4, 4, 5".
+//      Избавиться от повторяющихся элементов в строке.
+//      Вывести результат на экран.
+
+
+        System.out.println("Enter you set of numbers. Input 0 to live ");
+        List<Number> listNumber = new ArrayList<>();
+        Scanner scanner = new Scanner(System.in);
+        int number;
+
+        while ((number = scanner.nextInt()) != 0) {
+            listNumber.add(number);
+            System.out.println(listNumber);
+        }
+        scanner.close();
+        System.out.println(listNumber);
+
+        Set<Number> listSet = new LinkedHashSet<>(listNumber);
+        listNumber.clear();
+        listNumber.addAll(listSet);
+        System.out.println(listNumber);
+
     }
-
-
-
-    // Общий метод для создания нового `TreeSet` из `HashSet`
-
 
 //    private static void  changeBoxWeight (HeavyBox box){
 //        box.setWeight(box.getWeight() + 1);
 //    }
+
 }
