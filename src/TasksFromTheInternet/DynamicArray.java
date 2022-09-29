@@ -9,6 +9,7 @@ package TasksFromTheInternet;
 //  Удалить все ящики.
 
 import java.lang.reflect.Type;
+import java.sql.SQLOutput;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -54,10 +55,8 @@ public class DynamicArray{
         treeSet.add(secondHouse);
         treeSet.add(thirdHouse);
 
-        for (HeavyBox h: treeSet) {
-            System.out.println(h);
-        }
-//        System.out.println(treeSet);
+        treeSet.forEach(System.out::println);
+
     }
 
 
